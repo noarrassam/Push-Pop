@@ -3,10 +3,7 @@ class Array {
     this.data = {};
   }
 
-  getbyIndex() {
-    //let arr = this.data.shift();
-    //console.log(arr);
-  }
+  getbyIndex() {}
 
   push(...num) {
     var arr = Object.entries(this.data);
@@ -19,15 +16,15 @@ class Array {
 
   pop() {
     console.log(this.data);
-    var arr1 = Object.values(this.data);
-    console.log(arr1);
-    for (let i = 0; i < arr1.length; i++) {
-      arr1[i].pop();
-      for (let i = 0; i < arr1.length; i++) {
-        this.data[i] = arr1[i];
-      }
+    var array = Object.values(this.data);
+    console.log(array);
+    for (let i = 0; i < array.length; i++) {
+      array[i].pop();
     }
-    console.log(arr1);
+    for (let j = 0; j < array.length; j++) {
+      this.data[j] = array[j];
+    }
+    console.log(array);
   }
 }
 
