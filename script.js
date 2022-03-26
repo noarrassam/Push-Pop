@@ -3,7 +3,12 @@ class Array {
     this.data = {};
   }
 
-  getbyIndex() {}
+  getbyIndex(text) {
+    var arr = Object.values(this.data);
+    arr.forEach((item, index) => {
+      console.log(item[text]);
+    });
+  }
 
   push(...num) {
     var arr = Object.entries(this.data);
@@ -32,4 +37,6 @@ let array = new Array();
 array.push(5, 6, 7);
 console.log(array);
 array.pop();
+console.log(array);
+array.getbyIndex(0);
 console.log(array);
