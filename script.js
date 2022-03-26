@@ -15,14 +15,19 @@ class Array {
     for (let i = 0; i < arr.length; i++) {
       this.data[i] = arr[i];
     }
-    console.log(this.data);
   }
 
   pop() {
     console.log(this.data);
-    var arr = Object.entries(this.data);
-    arr.pop();
-    console.log(arr);
+    var arr1 = Object.values(this.data);
+    console.log(arr1);
+    for (let i = 0; i < arr1.length; i++) {
+      arr1[i].pop();
+      for (let i = 0; i < arr1.length; i++) {
+        this.data[i] = arr1[i];
+      }
+    }
+    console.log(arr1);
   }
 }
 
