@@ -9,7 +9,7 @@ class Array {
   }
 
   push(...num) {
-    var arr = Object.values(this.data);
+    var arr = Object.entries(this.data);
     arr.push(num);
     console.log(arr);
     for (let i = 0; i < arr.length; i++) {
@@ -19,8 +19,10 @@ class Array {
   }
 
   pop() {
-    var pers = Object.entries(this.data);
-    pers.pop();
+    console.log(this.data);
+    var arr = Object.entries(this.data);
+    arr.pop();
+    console.log(arr);
   }
 }
 
@@ -29,5 +31,3 @@ array.push(5, 6, 7);
 console.log(array);
 array.pop();
 console.log(array);
-
-//array.pop();
