@@ -1,6 +1,6 @@
 # Name: Noar Rassam
 
-# Pop & Push
+# Push & Pop
 
 ## Description
 
