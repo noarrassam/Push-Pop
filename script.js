@@ -1,42 +1,31 @@
-class Array {
+class MyArray {
   constructor() {
     this.data = {};
+    this.length = 0;
   }
 
   getbyIndex(text) {
-    var arr = Object.values(this.data);
-    arr.forEach((item, index) => {
-      console.log(item[text]);
-    });
+    console.log(this.data[text]);
   }
 
-  push(...num) {
-    var arr = Object.entries(this.data);
-    arr.push(num);
-    console.log(arr);
-    for (let i = 0; i < arr.length; i++) {
-      this.data[i] = arr[i];
-    }
+  push(num) {
+    this.data[this.length] = num;
+    this.length++;
   }
 
   pop() {
-    console.log(this.data);
-    var array = Object.values(this.data);
-    console.log(array);
-    for (let i = 0; i < array.length; i++) {
-      array[i].pop();
-    }
-    for (let j = 0; j < array.length; j++) {
-      this.data[j] = array[j];
-    }
-    console.log(array);
+    delete this.data[this.length - 1];
+    console.log(this.length);
+    this.length--;
   }
 }
 
-let array = new Array();
-array.push(5, 6, 7);
+let array = new MyArray();
+array.push(5);
+console.log(array);
+array.push(7);
+console.log(array);
+array.getbyIndex(1);
 console.log(array);
 array.pop();
-console.log(array);
-array.getbyIndex(0);
 console.log(array);
