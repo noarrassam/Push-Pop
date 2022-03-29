@@ -4,7 +4,7 @@
 
 ## Description
 
-It's a simple application that uses mapping (key, value) to convert an object into array to push all values through push parameter in array as well as a user can pop the last value of an array, including getting the index.
+It's a simple application that uses mapping (key, value) to push values through push parameter, and also user can pop the last value of length, including get index of an object.
 
 ## Used
 
